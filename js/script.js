@@ -31,3 +31,28 @@ function toggleSection(sectionId, buttonId) {
 }
 
 loadNavbar();
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the close button
+  var span = document.querySelector(".close");
+
+  // When the user clicks the button, open the modal
+  function showModal() {
+    modal.style.display = "block";
+  }
+
+  // When the user clicks on the close button, close the modal
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+});
